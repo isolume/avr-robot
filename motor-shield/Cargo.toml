@@ -1,0 +1,13 @@
+[package]
+name = "motor-shield"
+version = "0.1.0"
+authors = ["nerd <nerd@n3rd3x3.dev>"]
+edition = "2021"
+
+[dependencies]
+ufmt = "0.2.0"
+
+[dependencies.arduino-hal]
+git = "https://github.com/rahix/avr-hal"
+rev = "45a37eb746d264166c3ea382fed323a204104998"
+features = ["arduino-uno"]
