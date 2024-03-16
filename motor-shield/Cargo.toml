@@ -5,7 +5,6 @@ authors = ["nerd <nerd@n3rd3x3.dev>"]
 edition = "2021"
 
 [dependencies]
-ufmt = "0.2.0"
 
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"
