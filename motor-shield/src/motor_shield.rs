@@ -162,4 +162,20 @@ impl MotorShield {
             _ => panic!("invalid servo index")
         }
     }
+
+    pub fn enable_motors(&mut self, motor_ids: &[usize]) {
+        for &id in motor_ids {
+            if let Some(motor) = self.motor(id) {
+                motor.enable();
+            }
+        }
+    }
+
+    pub fn set_speeds(&mut self, motor_speeds: &[(usize, u8)]) {
+        for &(id, speed) in motor_speeds {
+            if let Some(motor) = self.motor(id) {
+                motor.speed(speed);
+            }
+        }
+    }
 }
